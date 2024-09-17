@@ -1,7 +1,7 @@
 # Initialize a mysql db with a 'test' db and be able test productpage with it.
 # mysql -h 127.0.0.1 -ppassword < mysqldb-init.sql
-
-CREATE DATABASE test;
+DROP DATABASE IF EXISTS test;
+CREATE DATABASE IF NOT EXISTS test;
 USE test;
 
 CREATE TABLE `ratings` (
